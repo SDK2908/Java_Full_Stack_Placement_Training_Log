@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 int from user add them find and print sum of digits of the above result is odd or even
+eg: 100 + 149 => 249 ; 2+4+9 => 15; odd</title>
+</head>
+<script>
+    function calculateSum() {
+        let n1 = document.getElementById("num1").value;
+        let n2 = document.getElementById("num2").value;
+        let sum = Number(n1) + Number(n2);
+        let digitSum = 0;
+        while(sum>0){
+            digitSum += sum%10;
+            sum = Math.floor(sum/10);
+        }
+        console.log(digitSum);
+
+        if(digitSum % 2 === 0){
+            document.getElementById("result").textContent = "Even";
+        }
+        else{
+            document.getElementById("result").textContent = "Odd";
+        }
+        
+    }
+</script>
+<body>
+    <input type="number" id="num1" placeholder="Enter first number">
+    <input type="number" id="num2" placeholder="Enter second number">
+    <button onclick="calculateSum()">Calculate Sum</button>
+    <p>eg: 100 + 149 => 249 ; 2+4+9 => 15 ; odd</p>
+    <p id="result"></p>
+</body>
+</html>
