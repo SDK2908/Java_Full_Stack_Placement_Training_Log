@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Console Log Demo</title>
+</head>
+<script>
+    function handleClick() {
+        let x = 20;
+        if(x>=10 && x<=50){
+            console.log("x is between 10 and 50");
+            document.getElementById("num").textContent = "x is between 10 and 50";
+        } 
+        else if(x>=50 && x<=100){
+            console.log("x is between 50 and 100");
+            document.getElementById("num").textContent = "x is between 50 and 100";
+        }
+        else if(x>100){
+            console.log("x is above 100");
+            document.getElementById("num").textContent = "x is above 100";
+        }
+        else {
+            console.log("x is less than 10");
+            document.getElementById("num").textContent = "x is less than 10";
+        }
+    }
+</script>
+<body>
+    <button onclick="handleClick()">Log it into console</button>
+    <p style="color:red;" id="num"></p>
+</body>
+</html>
